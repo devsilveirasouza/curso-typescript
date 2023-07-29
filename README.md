@@ -18,3 +18,8 @@ Pastas:
     
     Dentro da pasta "src" ficam os arquivos de desenvolvimento.
 
+## Como previnir erros
+
+    tsc script.ts --noEmitOnError 
+    - Não emitir o arquivo com error. -
+    - Para executar este comando tem que estar dentro da pasta ou informar a pasta antes do arquivo no comando ex: tsc src/script.ts
