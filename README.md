@@ -10,11 +10,11 @@ npm install typescript
 
 ### Estrutura de um projeto com typescript
 
-Pastas:
+Pastas:    
+    
+    Criar uma pasta public e outra src:
 
-    Para iniciar digitamos o comando abaixo:
-        tsc script.ts
+    Dentro da pasta "public" ficam os arquivos de acesso publico: index.html, script.js etc. 
     
-    public; dentro desta pasta ficam os arquivos de acesso publico: index.html, script.js ... 
-    
-    src; dentro desta pasta fiscam os arquivos de produção digamos assim.
+    Dentro da pasta "src" ficam os arquivos de desenvolvimento.
+
