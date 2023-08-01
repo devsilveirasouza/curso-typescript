@@ -1,5 +1,8 @@
-let nome: string = "Wellington";
+// DECLARANDO ARRAYS
+let nomes: string[] = ['Wellington', 'Ton', 'Brenda', 'Jana'];
 
-let idade: number = 25;
+let idades: number[] = [25, 35, 24, 15];
 
-let programador: boolean;
+let numeros: Array<number> = [15, 23, 90, 11];
+// INSERIR DADOS NO ARRAY
+nomes.push('Souza');
