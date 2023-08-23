@@ -1,5 +1,5 @@
 // DECLARANDO ARRAYS
-let nomes: string[] = ['Wellington', 'Ton', 'Brenda', 'Jana'];
+let nomes: string[] = ['Well', 'Ton', 'Brenda', 'Jana'];
 
 let idades: number[] = [25, 35, 24, 15];
 
