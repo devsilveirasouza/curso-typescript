@@ -109,7 +109,7 @@
 // }
 
 // interface Carro {
-//   marca: string;  
+//   marca: string;
 // }
 
 // function descricao(carro: Carro) {
@@ -124,8 +124,58 @@
 // });
 
 // -- Type Assertions -- //
-let idadeField = document.getElementById('idade') as HTMLInputElement;
+// let idadeField = document.getElementById('idade') as HTMLInputElement;
+// ...
+// console.log( idadeField.value );
 
-// ... 
+// -- Types literais -- //
+// let nome: "Ton" = "Ton";
 
-console.log( idadeField.value );
+// nome = 'pedro';
+// function mostrarTexto(
+//   texto: string,
+//   alinhamento: "left" | "right" | "center"
+// ) {
+//     return `<div style="text-align: ${alinhamento}">${texto}</div>`;
+// }
+
+// mostrarTexto("Ton", "left");
+// mostrarTexto("Ton", "right");
+// mostrarTexto("Ton", "blabla");// <- literal não aceita 
+
+// Exemplo 02
+// function temNome(nome: string): true | false {
+//     if (nome !== '') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Exemplo 03
+// let n1: number = 10;
+// let n2: number = 5;
+
+// type VerdadeiroOuFalso = true | false;
+
+// function maior(n1: number, n2: number): true | false {
+//     if (n1 > n2) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Exemplo 04
+// type Opcoes = {
+//     width: number, 
+//     height: number
+// }
+
+// function configurar( props: Opcoes | 'auto' ) {
+
+// }
+
+// configurar({width: 100, height: 200});
+// configurar('auto');
+// configurar('automatico');// <- não funciona
