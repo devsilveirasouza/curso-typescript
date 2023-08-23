@@ -15,7 +15,7 @@
 // let coisas: any = ['Paulo', 59, 'Mary', true];
 // coisas.push(759);
 
-// Usando types no retorno de uma função // 
+// Usando types no retorno de uma função //
 // function firstLetterUpperCase(name: string): string {
 //     let firstLetter = name.charAt(0).toUpperCase();
 //     return firstLetter+name.substring(1);
@@ -44,18 +44,31 @@
 // });
 
 // Types em objetos //
-// Parte 2 - 
+// Parte 2 -
 // Propriedades Opcionais
-function resumo(usuario: {nome: string, idade?: number}) { // idade? => não obrigatório
-    if (usuario.idade !== undefined) {
-        return `Olá ${usuario.nome}, tudo bem? Você têm ${usuario.idade} anos`;
-    } else {
-        return `Olá ${usuario.nome}, tudo bem?`;
-    }
-    
+// function resumo(usuario: {nome: string, idade?: number}) { // idade? => não obrigatório
+//     if (usuario.idade !== undefined) {
+//         return `Olá ${usuario.nome}, tudo bem? Você têm ${usuario.idade} anos`;
+//     } else {
+//         return `Olá ${usuario.nome}, tudo bem?`;
+//     }
+
+// }
+// // Implementação da função
+// let u = {
+//     nome: 'Wellington'
+// };
+// resumo(u);
+
+// Union Types (múltiplos types) //
+// let idade: string | number = 90;
+function mostrarIdade(idade: string | number) {
+  if (typeof idade === "string") {
+    console.log("Minha idade é: " + idade);
+  } else {
+    console.log(idade);
+  }
 }
-// Implementação da função
-let u = {
-    nome: 'Wellington'
-};
-resumo(u);
+
+mostrarIdade(90);
+mostrarIdade("90");
