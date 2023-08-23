@@ -44,12 +44,18 @@
 // });
 
 // Types em objetos //
-function resumo(usuario: {nome: string, idade: number}) {
-    return `Olá ${usuario.nome}, tudo bem? Você têm ${usuario.idade} anos`;
+// Parte 2 - 
+// Propriedades Opcionais
+function resumo(usuario: {nome: string, idade?: number}) { // idade? => não obrigatório
+    if (usuario.idade !== undefined) {
+        return `Olá ${usuario.nome}, tudo bem? Você têm ${usuario.idade} anos`;
+    } else {
+        return `Olá ${usuario.nome}, tudo bem?`;
+    }
+    
 }
 // Implementação da função
 let u = {
-    nome: 'Wellington',
-    idade: 60
+    nome: 'Wellington'
 };
 resumo(u);
