@@ -33,12 +33,23 @@
 // let outra = somar(45, 72);
 
 // Contextual Typing em funções anônimas //
-let names = ['Maria', 'Lucia', 'Gilson', 'Pedro', 90];
-// função anônima
-names.forEach(function(nome){
-    if (typeof nome ==='string') {
-    console.log(nome.toUpperCase());
-    } else {
-        console.log(nome)
-    }
-});
+// let names = ['Maria', 'Lucia', 'Gilson', 'Pedro', 90];
+// // função anônima
+// names.forEach(function(nome){
+//     if (typeof nome ==='string') {
+//     console.log(nome.toUpperCase());
+//     } else {
+//         console.log(nome)
+//     }
+// });
+
+// Types em objetos //
+function resumo(usuario: {nome: string, idade: number}) {
+    return `Olá ${usuario.nome}, tudo bem? Você têm ${usuario.idade} anos`;
+}
+// Implementação da função
+let u = {
+    nome: 'Wellington',
+    idade: 60
+};
+resumo(u);
