@@ -75,50 +75,57 @@
 // Type e Interface: Como usar e diferenças
 // Simplificar e organizar o código
 // --- Definindo o type --- //
-type NomeCompleto = string;
-type Idade = string | number;
+// type NomeCompleto = string;
+// type Idade = string | number;
 
-let nome: NomeCompleto = "Wellington";
-let idade: Idade = 90;
+// let nome: NomeCompleto = "Wellington";
+// let idade: Idade = 90;
 
-function mostrarIdade(i: Idade): Idade {
-  return i;
-}
-// --- Type
-// Não pode ser alterada a estrutura
-type User = {
-  nome: string;
-  idade: number;
-};
+// function mostrarIdade(i: Idade): Idade {
+//   return i;
+// }
+// // --- Type
+// // Não pode ser alterada a estrutura
+// type User = {
+//   nome: string;
+//   idade: number;
+// };
 
-function resumo(usuario: User) {
-  // function resumo(usuario: {nome: string, idade: number} ) {
-  return `Olá ${usuario.nome}, você têm ${usuario.idade} anos.`;
-}
+// function resumo(usuario: User) {
+//   // function resumo(usuario: {nome: string, idade: number} ) {
+//   return `Olá ${usuario.nome}, você têm ${usuario.idade} anos.`;
+// }
 
-resumo({
-  nome: "Wellington",
-  idade: 40,
-});
+// resumo({
+//   nome: "Wellington",
+//   idade: 40,
+// });
 
-// --- Interface
-// Pode ter a estrutura alterada
-interface Carro {
-  modelo: string;
-  portas: number;
-}
+// // --- Interface
+// // Pode ter a estrutura alterada
+// interface Carro {
+//   modelo: string;
+//   portas: number;
+// }
 
-interface Carro {
-  marca: string;  
-}
+// interface Carro {
+//   marca: string;  
+// }
 
-function descricao(carro: Carro) {
-  // function resumo(carro: {modelo: string, portas: number} ) {
-  return `Olá ${carro.modelo}, você têm ${carro.portas} anos.`;
-}
+// function descricao(carro: Carro) {
+//   // function resumo(carro: {modelo: string, portas: number} ) {
+//   return `Olá ${carro.modelo}, você têm ${carro.portas} anos.`;
+// }
 
-descricao({
-  modelo: "GOL",
-  portas: 4,
-  marca: "VW"
-});
+// descricao({
+//   modelo: "GOL",
+//   portas: 4,
+//   marca: "VW"
+// });
+
+// -- Type Assertions -- //
+let idadeField = document.getElementById('idade') as HTMLInputElement;
+
+// ... 
+
+console.log( idadeField.value );
