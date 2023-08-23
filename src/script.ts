@@ -1,4 +1,4 @@
-// DECLARANDO ARRAYS
+// DECLARANDO ARRAYS //
 // let nomes: string[] = ['Well', 'Ton', 'Brenda', 'Jana'];
 
 // let idades: number[] = [25, 35, 24, 15];
@@ -31,3 +31,14 @@
 //     return `${n1 + n2}`;
 // }
 // let outra = somar(45, 72);
+
+// Contextual Typing em funções anônimas //
+let names = ['Maria', 'Lucia', 'Gilson', 'Pedro', 90];
+// função anônima
+names.forEach(function(nome){
+    if (typeof nome ==='string') {
+    console.log(nome.toUpperCase());
+    } else {
+        console.log(nome)
+    }
+});
