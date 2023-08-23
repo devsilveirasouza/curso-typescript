@@ -62,13 +62,63 @@
 
 // Union Types (múltiplos types) //
 // let idade: string | number = 90;
-function mostrarIdade(idade: string | number) {
-  if (typeof idade === "string") {
-    console.log("Minha idade é: " + idade);
-  } else {
-    console.log(idade);
-  }
+// function mostrarIdade(idade: string | number) {
+//   if (typeof idade === "string") {
+//     console.log("Minha idade é: " + idade);
+//   } else {
+//     console.log(idade);
+//   }
+// }
+// mostrarIdade(90);
+// mostrarIdade("90");
+
+// Type e Interface: Como usar e diferenças
+// Simplificar e organizar o código
+// --- Definindo o type --- //
+type NomeCompleto = string;
+type Idade = string | number;
+
+let nome: NomeCompleto = "Wellington";
+let idade: Idade = 90;
+
+function mostrarIdade(i: Idade): Idade {
+  return i;
+}
+// --- Type
+// Não pode ser alterada a estrutura
+type User = {
+  nome: string;
+  idade: number;
+};
+
+function resumo(usuario: User) {
+  // function resumo(usuario: {nome: string, idade: number} ) {
+  return `Olá ${usuario.nome}, você têm ${usuario.idade} anos.`;
 }
 
-mostrarIdade(90);
-mostrarIdade("90");
+resumo({
+  nome: "Wellington",
+  idade: 40,
+});
+
+// --- Interface
+// Pode ter a estrutura alterada
+interface Carro {
+  modelo: string;
+  portas: number;
+}
+
+interface Carro {
+  marca: string;  
+}
+
+function descricao(carro: Carro) {
+  // function resumo(carro: {modelo: string, portas: number} ) {
+  return `Olá ${carro.modelo}, você têm ${carro.portas} anos.`;
+}
+
+descricao({
+  modelo: "GOL",
+  portas: 4,
+  marca: "VW"
+});
