@@ -141,7 +141,7 @@
 
 // mostrarTexto("Ton", "left");
 // mostrarTexto("Ton", "right");
-// mostrarTexto("Ton", "blabla");// <- literal não aceita 
+// mostrarTexto("Ton", "blabla");// <- literal não aceita
 
 // Exemplo 02
 // function temNome(nome: string): true | false {
@@ -168,7 +168,7 @@
 
 // Exemplo 04
 // type Opcoes = {
-//     width: number, 
+//     width: number,
 //     height: number
 // }
 
@@ -179,3 +179,76 @@
 // configurar({width: 100, height: 200});
 // configurar('auto');
 // configurar('automatico');// <- não funciona
+
+// --- Inferência literal --- //
+// --- Exemplo 01 --- //
+// function fazerOutraRequiscao(url: string, method: "GET" | "POST") {
+//   // ...
+// }
+// type RequestDetails = {
+//   url: string;
+//   method: "GET" | "POST";
+// };
+// let req: RequestDetails = {
+//   url: "https://google.com.br",
+//   method: "GET",
+// };
+// fazerOutraRequiscao(req.url, req.method);
+
+// // --- Exemplo 02 --- //
+// function fazerRequiscao(url: string, method: "GET" | "POST") {
+//   // ...
+// }
+// type Methods = "GET" | "POST";
+
+// let url = "https://google.com.br";
+// let method: Methods = "GET";
+
+// fazerRequiscao(url, method);
+
+// -- Type para funções -- //
+// Exemplo 01
+// type MathFunction = (n1: number, n2: number) => number;
+
+// const somar: MathFunction = (n1, n2) => {
+//   return n1 + n2;
+// }
+
+// const subtrair: MathFunction = (n1, n2) => {
+//   return n1 - n2;
+// }
+
+// const multiplicar: MathFunction = (n1, n2) => {
+//   return n1 * n2;
+// }
+
+// const dividir: MathFunction = (n1, n2) => {
+//   return n1 / n2;
+// }
+
+// somar(51, 65);
+// subtrair(90, 30);
+// multiplicar(90, 30);
+// dividir(90, 30);
+
+// Type void
+// Exemplo 01
+// function removerElemento(el: HTMLElement): void {
+//   // processo de remoção do elemento
+//   el.remove();
+// }
+// removerElemento( document.getElementById('teste') );
+
+// Exemplo 02
+type QualquerFuncao = () => void;// Não espera nada de retorno
+
+const algo: QualquerFuncao = () => {
+  return "bla bla";
+}
+
+// Exemplo 03
+let retorno = algo();
+
+const blabla = (): void => { // Retorno é void
+  // ... nada
+}
